@@ -16,12 +16,12 @@ public class GreetingController {
     }
 
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name",defaultValue = "World") String name){
+    public Greeting greeting(@RequestParam(value = "name",defaultValue = "Welcome to At My Time!") String name){
         return new Greeting(counter.incrementAndGet(),name);
     }
 
     @RequestMapping("/*")
-    public Greeting greeting1(@RequestParam(value = "name",defaultValue = "World") String name){
+    public Greeting greeting1(@RequestParam(value = "name",defaultValue = "Welcome to At My Time!") String name){
         return new Greeting(counter.incrementAndGet(),name);
     }
 
